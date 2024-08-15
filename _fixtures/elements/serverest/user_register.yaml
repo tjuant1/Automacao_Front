@@ -1,0 +1,17 @@
+user_register:
+  type_name:
+    tipo: input
+    tipo_seletor: css
+    seletor: input.form-control[id="nome"]
+  type_email:
+    tipo: input
+    tipo_seletor: css
+    seletor: input.form-control[id="email"]
+  type_password:
+    tipo: input
+    tipo_seletor: css
+    seletor: input.form-control[id="password"]
+  button:
+    tipo: button
+    tipo_seletor: css
+    seletor: button.btn-primary[data-testid="cadastrarUsuario"]

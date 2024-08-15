@@ -1,0 +1,25 @@
+register:
+  button:
+    tipo: button
+    tipo_seletor: css
+    seletor: a.btn-link[data-testid="cadastrar"]
+  type_name:
+    tipo: input
+    tipo_seletor: css
+    seletor: input.form-control[data-testid="nome"]
+  type_email:
+    tipo: input
+    tipo_seletor: css
+    seletor: input.form-control[data-testid="email"]
+  type_email:
+    tipo: input
+    tipo_seletor: css
+    seletor: input.form-control[data-testid="password"]
+  admin_button:
+    tipo: checkbox
+    tipo_seletor: css
+    seletor: input.form-check-input[id="administrador"]
+  login_button:
+    tipo: input
+    tipo_seletor: css
+    seletor: button.btn-primary[data-testid="cadastrar"]

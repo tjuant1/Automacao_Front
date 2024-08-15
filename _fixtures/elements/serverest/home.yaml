@@ -1,0 +1,5 @@
+user_register:
+  button:
+    tipo: button
+    tipo_seletor: css
+    seletor: a.text-light[data-testid="cadastrar-usuarios"]
