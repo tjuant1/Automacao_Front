@@ -1,9 +1,3 @@
 login:
-  email:
-    tipo: input
-    tipo_seletor: css
-    seletor: email
-  senha:
-    tipo: input
-    tipo_seletor: css
-    seletor: password
+  email: //input[@class='form-control'][@data-testid='senha']
+  password: //input[@class='form-control'][@data-testid='senha']

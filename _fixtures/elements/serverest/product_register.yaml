@@ -1,0 +1,5 @@
+product_register:
+  product_name: //input[@class='form-control'][@data-testid="nome"]
+  product_price: //input[@class='form-control'][@data-testid="preco"]
+  product_description: //textarea[@class='form-control'][@data-testid="descricao"]
+  product_quantity: //input[@class='form-control'][data-testid="quantity"]

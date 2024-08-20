@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-19T22:47:22.420296" rpa="false" schemaversion="5">
+<suite id="s1" name="Register" source="C:\RobotFramework\front_automation\Automacao_Front\tests\register.robot">
+<kw name="Setup" owner="register_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:23.557071" level="INFO">Opening browser 'firefox' to base url 'https://front.serverest.dev/login'.</msg>
+<arg>${access['url_login']}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-19T22:47:23.557071" elapsed="7.502094"/>
+</kw>
+<doc>Open chrome on selected url in headless mode</doc>
+<status status="PASS" start="2024-08-19T22:47:23.555071" elapsed="7.504094"/>
+</kw>
+<test id="s1-t1" name="Complete Flux" line="10">
+<kw name="Register Admin" owner="register_keywords">
+<kw name="Generate Data" owner="register_keywords">
+<kw name="Word" owner="FakerLibrary">
+<msg time="2024-08-19T22:47:31.061166" level="INFO">${word} = drive</msg>
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.060166" elapsed="0.001000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-08-19T22:47:31.061166" level="INFO">${word} = drive</msg>
+<arg>${word}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.061166" elapsed="0.000000"/>
+</kw>
+<kw name="Words" owner="FakerLibrary">
+<msg time="2024-08-19T22:47:31.061166" level="INFO">${words} = ['phone', 'day', 'figure', 'against', 'allow', 'claim', 'many', 'region', 'north', 'even']</msg>
+<var>${words}</var>
+<arg>10</arg>
+<doc>Generate a tuple of words.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.061166" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-08-19T22:47:31.062167" level="INFO">${words} = ['phone', 'day', 'figure', 'against', 'allow', 'claim', 'many', 'region', 'north', 'even']</msg>
+<arg>${words}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.062167" elapsed="0.000000"/>
+</kw>
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2024-08-19T22:47:31.062167" level="INFO">${name} = Jay</msg>
+<var>${name}</var>
+<status status="PASS" start="2024-08-19T22:47:31.062167" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-08-19T22:47:31.062167" level="INFO">${name} = Jay</msg>
+<arg>${name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.062167" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-08-19T22:47:31.063167" level="INFO">${email_string} = ogb</msg>
+<var>${email_string}</var>
+<arg>3</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.062167" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-08-19T22:47:31.063167" level="INFO">${email} = Jayogb@email.com</msg>
+<var>${email}</var>
+<arg>${name}${email_string}@email.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.063167" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-08-19T22:47:31.063167" level="INFO">${email} = Jayogb@email.com</msg>
+<arg>${email}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.063167" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-08-19T22:47:31.063167" level="INFO">${ps1} = VC</msg>
+<var>${ps1}</var>
+<arg>2</arg>
+<arg>[UPPER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.063167" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-08-19T22:47:31.064167" level="INFO">${ps2} = yjz</msg>
+<var>${ps2}</var>
+<arg>3</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.063167" elapsed="0.001000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-08-19T22:47:31.064167" level="INFO">${ps3} = 8875</msg>
+<var>${ps3}</var>
+<arg>4</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.064167" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-08-19T22:47:31.064167" level="INFO">${ps4} = 09900</msg>
+<var>${ps4}</var>
+<arg>5</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.064167" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-08-19T22:47:31.065168" level="INFO">${password} = 8875@VCyjz</msg>
+<arg>${password}</arg>
+<arg>${ps3}@${ps1}${ps2}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.064167" elapsed="0.001001"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-08-19T22:47:31.065168" level="INFO">${ps4} = 09900</msg>
+<arg>${ps4}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.065168" elapsed="0.000000"/>
+</kw>
+<doc>Generate data for tests</doc>
+<status status="PASS" start="2024-08-19T22:47:31.060166" elapsed="0.005002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${first_register['element_visible']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.065168" elapsed="0.020732"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:31.085900" level="INFO">Clicking element '//a[@class='btn btn-link'][@data-testid='cadastrar']'.</msg>
+<arg>${first_register['button']}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.085900" elapsed="0.224953"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:31.310853" level="INFO">Typing text 'Jay' into text field '//input[@data-testid='nome'][@class='form-control']'.</msg>
+<arg>${first_register['type_name']}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.310853" elapsed="0.042009"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:31.352862" level="INFO">Typing text 'Jayogb@email.com' into text field '//input[@class='form-control'][@id="email"]'.</msg>
+<arg>${first_register['type_email']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.352862" elapsed="0.025503"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:31.378365" level="INFO">Typing password into text field '//input[@class='form-control'][@id="password"]'.</msg>
+<msg time="2024-08-19T22:47:31.382366" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${first_register['type_password']}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.378365" elapsed="0.017004"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:31.396369" level="INFO">Clicking button '//input[@class='form-check-input'][@id="administrador"]'.</msg>
+<arg>${first_register['admin_button']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.395369" elapsed="0.214655"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:31.611025" level="INFO">Clicking button '//button[@class='btn btn-primary btn btn-primary'][@data-testid="cadastrar"]'.</msg>
+<arg>${first_register['login_button']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.611025" elapsed="0.237036"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home['element_visible']}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-19T22:47:31.848061" elapsed="3.651350"/>
+</kw>
+<doc>Click register button and fill data</doc>
+<status status="PASS" start="2024-08-19T22:47:31.060166" elapsed="4.439245"/>
+</kw>
+<kw name="New User Register" owner="register_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:40.605318" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-19T22:47:40.605318" level="FAIL">Element '//h1[contains(.,'Cadastro de usuários')]' not visible after 5 seconds.</msg>
+<arg>${user_register['element_visible']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-08-19T22:47:35.500412" elapsed="5.106907">Element '//h1[contains(.,'Cadastro de usuários')]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${home['register_user']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.607319" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Data" owner="register_keywords">
+<doc>Generate data for tests</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.607319" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${user_register['type_name']}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.607319" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${user_register['type_email']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.607319" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${user_register['type_password']}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.607319" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${user_register['button']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.607319" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home['list']['user_list']['element_visible']}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.607319" elapsed="0.001005"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${email}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.608324" elapsed="0.000000"/>
+</kw>
+<doc>Register a new user with admin login</doc>
+<status status="FAIL" start="2024-08-19T22:47:35.500412" elapsed="5.107912">Element '//h1[contains(.,'Cadastro de usuários')]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Product Register" owner="register_keywords">
+<doc>Create a product so the user can select it</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.608324" elapsed="0.000000"/>
+</kw>
+<kw name="Logout" owner="register_keywords">
+<doc>Logout from application</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.608324" elapsed="0.000000"/>
+</kw>
+<kw name="Login Serverest" owner="register_keywords">
+<doc>login with created user</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.609319" elapsed="0.000000"/>
+</kw>
+<kw name="Buy Product" owner="register_keywords">
+<doc>buy a product using normal profile</doc>
+<status status="NOT RUN" start="2024-08-19T22:47:40.609319" elapsed="0.000000"/>
+</kw>
+<doc>Create user and login</doc>
+<status status="FAIL" start="2024-08-19T22:47:31.060166" elapsed="9.549153">Element '//h1[contains(.,'Cadastro de usuários')]' not visible after 5 seconds.</status>
+</test>
+<kw name="Close" owner="register_keywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-19T22:47:40.647553" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-19T22:47:40.610320" elapsed="0.037233"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-19T22:47:40.647553" elapsed="2.732128"/>
+</kw>
+<doc>Print and closes the Browser</doc>
+<status status="PASS" start="2024-08-19T22:47:40.610320" elapsed="2.769361"/>
+</kw>
+<status status="FAIL" start="2024-08-19T22:47:22.422296" elapsed="20.957385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

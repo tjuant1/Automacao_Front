@@ -1,0 +1,10 @@
+first_register:
+  element_visible: //img[contains(@height,'200')]
+  button: //a[@class='btn btn-link'][@data-testid='cadastrar']
+  type_name: //input[@data-testid='nome'][@class='form-control']
+  type_email: //input[@class='form-control'][@id="email"]
+  type_password: //input[@class='form-control'][@id="password"]
+  admin_button: //input[@class='form-check-input'][@id="administrador"]
+  login_button: //button[@class='btn btn-primary btn btn-primary'][@data-testid="cadastrar"]
+
+#selector CSS now working - a.btn-link[data-testid="cadastrar"]
