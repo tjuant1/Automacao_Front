@@ -1,12 +1,15 @@
 home:
   element_visible: //button[@data-testid="logout"]
-  register_user: //a[@class='btn text-light'][@data-testid="cadastrar-usuarios"]
-  register_product: //a[@class='btn text-light'][@data-testid="cadastrar-produtos"]
-  # select_product: //h6[text()='450'] | //button[@class='btn btn-primary']
+  register_user: //a[@data-testid="cadastrar-usuarios"]
+  register_product: //a[@data-testid="cadastrar-produtos"]
+  logout: //button[@data-testid='logout']
   list: 
     product_list:
-      element_visible: //h1[text()='Lista dos usuários']
+      element_visible: //button[@class='btn btn-info']
       button: //a[@data-testid='listar-usuarios']
     user_list:
-      element_visible: //h1[text()='Lista dos Produtos']
+      element_visible: //td[contains(.,'variable')]
       button: //a[@data-testid='listar-produtos']
+
+# select_product: //h6[text()='450'] | //button[@class='btn btn-primary']
+#selector CSS now working - a.btn-link[data-testid="cadastrar"]

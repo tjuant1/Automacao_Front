@@ -6,7 +6,7 @@ Resource    ../resources.resource
 Setup
     [Documentation]    Open chrome on selected url in headless mode
 
-    Open Browser    ${access['url_login']}
+    Open Browser    ${access.url_login}
 
 Close
     [Documentation]    Print and closes the Browser
@@ -17,13 +17,14 @@ Close
 Login Serverest
     [Documentation]    login with created user
 
-    Input Text    ${login['email']}    ${email}
-    Input Password    ${login['password']}    ${password}
+    Input Text    ${login.email}    ${email}
+    Input Password    ${login.password}    ${password}
+    Click Button    ${login.login}
 
 Logout
     [Documentation]    Logout from application
 
-    Click Button    ${home['logout']}
+    Click Button    ${home.logout}
 
 Generate Data
     [Documentation]    Generate data for tests
@@ -53,52 +54,53 @@ Register Admin
 
     Generate Data
 
-    Wait Until Element Is Visible    ${first_register['element_visible']}
+    Wait Until Element Is Visible    ${first_register.element_visible}
     
-    Click Element        ${first_register['button']}
-    Input Text          ${first_register['type_name']}        ${name}
-    Input Text          ${first_register['type_email']}       ${email}
-    Input Password      ${first_register['type_password']}    ${password}
-    Click Button        ${first_register['admin_button']}
-    Click Button        ${first_register['login_button']}
+    Click Element        ${first_register.button}
+    Input Text          ${first_register.type_name}        ${name}
+    Input Text          ${first_register.type_email}       ${email}
+    Input Password      ${first_register.type_password}    ${password}
+    Click Button        ${first_register.admin_button}
+    Click Button        ${first_register.login_button}
 
-    Wait Until Element Is Visible    ${home['element_visible']}    5s
+    Wait Until Element Is Visible    ${home.element_visible}    5s
 
 New User Register
     [Documentation]    Register a new user with admin login
 
-    Wait Until Element Is Visible    ${user_register['element_visible']}
-    Click Button                     ${home['register_user']}
+    Click Element                     ${home.register_user}
+    Wait Until Element Is Visible    ${user_register.element_visible}
 
     Generate Data
 
-    Input Text                       ${user_register['type_name']}        ${name}
-    Input Text                       ${user_register['type_email']}       ${email}
-    Input Password                   ${user_register['type_password']}    ${password}
-    Click Button                     ${user_register['button']}
+    Input Text                       ${user_register.type_name}        ${name}
+    Input Text                       ${user_register.type_email}       ${email}
+    Input Password                   ${user_register.type_password}    ${password}
+    Click Button                     ${user_register.button}
 
-    Wait Until Element Is Visible    ${home['list']['user_list']['element_visible']}    5s
+    ${home.list.user_list.element_visible}=    Replace String    ${home.list.user_list.element_visible}    variable    ${email}
+    Wait Until Element Is Visible    ${home.list.user_list.element_visible}    5s
     Page Should Contain    ${email}
 
 Product Register
     [Documentation]    Create a product so the user can select it
 
-    Click Button    ${home['register_product']}
+    Click Element    ${home.register_product}
 
-    Generate Data
-
-    Input Text    ${product_register['product_name']}      ${word}
-    Input Text    ${product_register['product_price']}     ${ps4}
-    Input Text    ${product_register['product_description']}    ${words}  
-    Input Text    ${product_register['product_quantity']}    ${ps4}
+    Input Text      ${product_register.product_name}      ${word}
+    Input Text      ${product_register.product_price}     ${ps4}
+    Input Text      ${product_register.product_description}    ${words}  
+    Input Text      ${product_register.product_quantity}    ${ps4}
+    Click Button    ${product_register.register_product}
     
-    Wait Until Element Is Visible    ${home['list']['product_list']['element_visible']}
-    Page Should Contain Element    ${word}
+    Sleep   3
+    # Wait Until Element Is Visible    ${home.list.product_list.element_visible}
+    Page Should Contain    ${word}
 
 Buy Product
     [Documentation]    buy a product using normal profile
 
-    Wait Until Element Is Enabled    ${home['element_visible']}
+    Wait Until Element Is Enabled    ${home.element_visible}
     Page Should Contain Element    ${word}
 
     # Click Element    ${home['select_product']}

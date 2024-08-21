@@ -1,3 +1,4 @@
 login:
-  email: //input[@class='form-control'][@data-testid='senha']
+  email: //input[@class='form-control'][@data-testid='email']
   password: //input[@class='form-control'][@data-testid='senha']
+  login: //button[@data-testid='entrar']
