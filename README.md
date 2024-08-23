@@ -9,9 +9,6 @@ This is a one week project automating a frontend application called Serverest, u
 |-- _fixtures/
 |-- |-- access/
 |-- |-- elements/
-|-- .github/
-|-- |-- workflows/
-|-- |-- |-- complete_flux.yaml
 |-- logs/
 |-- resources/
 |-- |-- resources.resource

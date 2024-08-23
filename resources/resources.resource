@@ -1,6 +1,5 @@
 *** Settings ***
 
-Library    RequestsLibrary
 Library    SeleniumLibrary
 Library    FakerLibrary
 Library    BuiltIn
