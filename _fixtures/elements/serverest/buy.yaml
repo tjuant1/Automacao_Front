@@ -1,0 +1,6 @@
+buy:
+  find_product: //div[contains(@class, 'card-body') and .//h5[text()='string']]//button[text()='Adicionar a lista']
+  increase_qnt: //div[contains(@class, 'card-body') and .//div[@class='col-3']]//button[@data-testid='product-increase-quantity']
+  add_to_cart: //button[@data-testid='adicionar carrinho']
+  element_visible: //div[contains(@class, 'jumbotron') and .//img[@class='imagem']]//img[@class='imagem']
+  logout: //button[@data-testid='logout']
