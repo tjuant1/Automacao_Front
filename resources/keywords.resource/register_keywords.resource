@@ -100,8 +100,15 @@ Product Register
 Buy Product
     [Documentation]    buy a product using normal profile
 
-    Wait Until Element Is Enabled    ${home.element_visible}
-    Page Should Contain Element    ${word}
+    ${buy.find_product}=    Replace String    ${buy.find_product}    string    ${word}
+
+    Sleep    3s
+    Click Button    ${buy.find_product}
+    Click Button    ${buy.increase_qnt}
+    Click Button    ${buy.add_to_cart}
+    Wait Until Element Is Visible    ${buy.element_visible}
+    Click Button    ${buy.logout}
+
 
     # Click Element    ${home['select_product']}
 
