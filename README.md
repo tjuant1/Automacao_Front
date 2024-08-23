@@ -1,5 +1,6 @@
 # Frontend Automation
-
+- Frontend automation using Robot Framework and Serverest
+  
 ## About the project
 This is a one week project automating a frontend application called Serverest, unfortunately it doesn't have much content yet but it was quite enlightening to automate this whole site since there are some peculiarities I had to learn and improve to be able to automate the whole process.
 
