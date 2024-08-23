@@ -6,7 +6,7 @@ Resource    ../../resources/resources.resource
 Setup
     [Documentation]    Open chrome on selected url in headless mode
 
-    Open Browser    ${access.url_login}
+    Open Browser    ${access.url_login}    headlesschrome
 
 Close
     [Documentation]    Print and closes the Browser
