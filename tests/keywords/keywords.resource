@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource    ../resources.resource
+Resource    ../../resources/resources.resource
 
 *** Keywords ***
 Setup
@@ -108,8 +108,4 @@ Buy Product
     Click Button    ${buy.add_to_cart}
     Wait Until Element Is Visible    ${buy.element_visible}
     Click Button    ${buy.logout}
-
-
-    # Click Element    ${home['select_product']}
-
-    
+   

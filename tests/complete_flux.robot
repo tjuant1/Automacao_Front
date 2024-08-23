@@ -4,7 +4,6 @@ Resource    ../resources/resources.resource
 
 Suite Setup       Setup
 Suite Teardown    Close
-Library    SSHLibrary
 
 *** Test Cases ***
 Complete Flux

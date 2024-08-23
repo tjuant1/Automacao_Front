@@ -5,6 +5,7 @@ Library    SeleniumLibrary
 Library    FakerLibrary
 Library    BuiltIn
 Library    String
+Library    SSHLibrary
 
 
 ## Yaml files
@@ -17,4 +18,4 @@ Variables    ../_fixtures/elements/serverest/product_register.yaml
 Variables    ../_fixtures/elements/serverest/buy.yaml
 
 ## Keywords
-Resource    ./keywords.resource/register_keywords.resource
+Resource    ../tests/keywords/keywords.resource
