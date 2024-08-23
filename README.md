@@ -17,10 +17,11 @@ This is a one week project automating a frontend application called Serverest, u
 |-- |-- resources.resource
 |-- tests/
 |-- |-- keywords/
-|-- complete_flux.robot
-|-- run_tests.py
-.gitignore
-readme.md
+|-- |-- complete_flux.robot
+|-- |-- run_tests.py
+|-- requirements.txt
+|-- .gitignore
+|-- readme.md
 ```
 ### 2- Prerequisites to use this project
 
